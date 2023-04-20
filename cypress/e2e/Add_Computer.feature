@@ -47,3 +47,12 @@ Feature: Computer Database - Add Computer Page
             | 2023-12-12     | 2024-12-55       | Invalid value for DayOfMonth                  |
             | 2023-12-12     | 2024-15-12       | Invalid value for MonthOfYear                 |
             | 2023-12-12     | test             | could not be parsed at index 0                |
+
+
+    Scenario: Validate Cancel Button
+        And I type a spesific computer name "Hostfully Computer"
+        And I enter a spesific introduced date "2022-12-12"
+        And I enter a spesific discontinued date "2023-12-12"
+        And I select a spesific company "RCA"
+        And I click on the cancel button
+        Then I navigate to the computer database homepage

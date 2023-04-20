@@ -39,3 +39,7 @@ Then('I should be presented with invalid introduced date alert message which con
 Then('I should be presented with invalid discontinued date alert message which contains {string}', (expectedMessage) => {
   addComputerPage.validate_invalid_discontinued_date_alert_message(expectedMessage);
 })
+
+When('I click on the cancel button', () => {
+  addComputerPage.clickOn_cancel_button()
+})

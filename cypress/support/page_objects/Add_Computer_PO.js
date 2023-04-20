@@ -32,6 +32,10 @@ class Add_Computer_PO extends Base_PO {
   validate_invalid_discontinued_date_alert_message(expectedMessage) {
     cy.get('.clearfix').eq(2).should('contain', expectedMessage)
   }
+
+  clickOn_cancel_button() {
+    cy.get('a.btn').click();
+  }
 }
 
 export default Add_Computer_PO;

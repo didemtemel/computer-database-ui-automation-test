@@ -26,3 +26,16 @@ When('I click on the create this computer button', () => {
 Then('I should be presented with required computer name alert message {string}', (expectedMessage) => {
   addComputerPage.validate_required_computer_name_alert_message(expectedMessage);
 })
+
+When('I enter both introduced date {string} and discontinued date {string}', (introducedDate, discontinuedDate) => {
+  addComputerPage.enter_introducedDate(introducedDate);
+  addComputerPage.enter_discontinuedDate(discontinuedDate);
+})
+
+Then('I should be presented with invalid introduced date alert message which contains {string}', (expectedMessage) => {
+  addComputerPage.validate_invalid_introduced_date_alert_message(expectedMessage);
+})
+
+Then('I should be presented with invalid discontinued date alert message which contains {string}', (expectedMessage) => {
+  addComputerPage.validate_invalid_discontinued_date_alert_message(expectedMessage);
+})

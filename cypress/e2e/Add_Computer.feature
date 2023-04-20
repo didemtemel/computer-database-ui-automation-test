@@ -11,3 +11,10 @@ Feature: Computer Database - Add Computer Page
         And I select a spesific company "RCA"
         And I click on the create this computer button
         Then I should be presented with succesful add a new computer message "Done !  Computer Hostfully Computer has been created"
+
+    Scenario: Add a New Computer Without Computer Name
+        And I enter a spesific introduced date "2022-12-12"
+        And I enter a spesific discontinued date "2023-12-12"
+        And I select a spesific company "RCA"
+        And I click on the create this computer button
+        Then I should be presented with required computer name alert message "Failed to refine type : Predicate isEmpty() did not fail."    

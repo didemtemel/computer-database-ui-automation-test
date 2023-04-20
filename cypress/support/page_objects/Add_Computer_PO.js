@@ -20,6 +20,10 @@ class Add_Computer_PO extends Base_PO {
   clickOn_createThisComputer_button() {
     cy.get(".primary").click();
   }
+
+  validate_required_computer_name_alert_message(expectedMessage) {
+    cy.get('.clearfix').eq(0).should('contain', expectedMessage);
+  }
 }
 
 export default Add_Computer_PO;

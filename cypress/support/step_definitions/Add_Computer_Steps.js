@@ -1,4 +1,4 @@
-import { When } from "@badeball/cypress-cucumber-preprocessor";
+import { When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import Add_Computer_PO from "../page_objects/Add_Computer_PO";
 
 const addComputerPage = new Add_Computer_PO();
@@ -21,4 +21,8 @@ When('I select a spesific company {string}', (computerName) => {
 
 When('I click on the create this computer button', () => {
   addComputerPage.clickOn_createThisComputer_button();
+})
+
+Then('I should be presented with required computer name alert message {string}', (expectedMessage) => {
+  addComputerPage.validate_required_computer_name_alert_message(expectedMessage);
 })

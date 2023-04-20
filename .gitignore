@@ -1,0 +1,23 @@
+.DS_Store
+node_modules
+/dist
+cypress/videos
+cypress/screenshots
+cypress/videos/
+.idea/*
+package-lock.json
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.mp4
+.idea
+.vscode
+*.suo
+.ntvs
+*.njsproj
+*.sln
+*.sw?

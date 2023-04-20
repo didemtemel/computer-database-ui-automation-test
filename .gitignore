@@ -6,6 +6,8 @@ cypress/screenshots
 cypress/videos/
 .idea/*
 package-lock.json
+cypress/reports/
+cypress/reports
 
 # Log files
 npm-debug.log*
